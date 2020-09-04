@@ -1,0 +1,29 @@
+{% load static %}
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>{% block title %}{% endblock title %} | TODO project</title>
+  
+    <!-- <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet" type="text/css" />
+    <link href="{% static 'css/bootstrap.extension.css' %}" rel="stylesheet" type="text/css" /> -->
+    <link href="{% static 'css/styles.css' %}" rel="stylesheet" type="text/css" />
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+    <script type="text/javascript" src="{% static 'js/todo.js' %}"></script>
+    {% block stylesheet %}{% endblock stylesheet %}
+  </head>
+  <body>
+    <div class="container">
+    <div class="row justify-content-center">
+      {% block content %}
+    {% endblock content %}
+  </div>
+</div>
+
+   
+    {% block javascript %}
+    {% endblock javascript%}
+  </body>
+</html>
